@@ -11,7 +11,7 @@ https://github.com/AlexeyAB/darknet
 
 <h3>STEPS:</h3>
 <br><b> 1.Download the original project from https://github.com/AlexeyAB/darknet and check the Requires </b></br>
-<br><b> 2.Go to its dictionary and open Makefile to change as following and do make in the directory</b></br>
+<br><b> 2.Go to its dictionary and open Makefile to change as following and do make in the directory</b>
 <br>(1)"GPU=1" to build with CUDA to accelerate by using GPU (CUDA should be in `/usr/local/cuda`)
 <br>(2)"CUDNN=1" to build with cuDNN v5-v7 to accelerate training by using GPU (cuDNN should be in `/usr/local/cudnn`)
 <br>(3)"CUDNN_HALF=1" to build for Tensor Cores (on Titan V / Tesla V100 / DGX-2 and later) speedup Detection 3x, Training 2x
