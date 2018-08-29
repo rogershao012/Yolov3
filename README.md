@@ -11,8 +11,6 @@ https://github.com/AlexeyAB/darknet
 <li><b>TransformJson Folder</b> -> <b>Transform output result to json format</b></li> 
 </ul>
 
-<h5>If you want to modify habcam dataset,there is something can us in tackleHabcam folder</h5>
-
 <h3>STEPS:</h3>
 <br><b> 1.Download the original project from https://github.com/AlexeyAB/darknet and check the Requires </b></br>
 <br><b> 2.Go to its dictionary and open Makefile to change as following and do make in the directory</b>
@@ -56,6 +54,9 @@ https://github.com/AlexeyAB/darknet
 <ul>
     <li>Remember picture still have to stay with YOLO(txt) to train</li>
 </ul>
+
+<h5> * If you want to modify habcam dataset,there is something can us in tackleHabcam folder</h5>
+
 <br><b> 11.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
 <li>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
