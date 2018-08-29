@@ -16,6 +16,7 @@
 <ul>
   <li><b>Remember</b>: </li>
   <li><b>Purpose </b>: </li>
+  <li><b>Usage </b>: python xml2txt.py 0 [source folder name] [deststion folder name] [voc name file]</li>
 </ul>
 <li><h4>pic2txt.py</h4></li>
 <ul>
