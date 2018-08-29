@@ -19,7 +19,7 @@ https://github.com/AlexeyAB/darknet
 <br>(5)"DEBUG=1" to bould debug version of Yolo
 <br>(6)"OPENMP=1" to build with OpenMP support to accelerate Yolo by using multi-core CPU
 <br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. <br>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
-    or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`
+    or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`</br>
 <br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74 and put to the directory build\darknet\x64</b></br>
 <br><b> 4.create yolov3_obj.cfg same content as yolov3.cfg and modify some place as following</b>
 <ul>
