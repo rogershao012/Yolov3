@@ -90,7 +90,7 @@ def createObjectNode(doc,attrs):
 
     return object_node
 
-# 将documentElement写入XML文件�?
+# Write documentElement into XML doc
 def writeXMLFile(doc,filename):
 
     tmpfile =open('tmp.xml','w')
@@ -99,7 +99,7 @@ def writeXMLFile(doc,filename):
 
     tmpfile.close()
 
-    # 删除第一行默认添加的标记
+    # delete annotation
 
     fin =open('tmp.xml')
     # print(filename)
@@ -123,17 +123,13 @@ def writeXMLFile(doc,filename):
 
 
 if __name__ == "__main__":
-    ##读取图片列表
+    ##read picture remember to updata
     img_path = "/media/share33/Database/NOAA Fish Finding/Training Data Release/imagery/habcam_seq0"
     fileList = os.listdir(img_path)
     if fileList == 0:
         os._exit(-1)
     ann_data=[]
     with open("COCO_train.json", "r") as f:
-        #for i in f:
-            #a=input("input:")
-        #    print(i)
-         #   ann_data.append(json.load(i))
         ann_data = json.load(f)
 
     current_dirpath = os.path.dirname(os.path.abspath('__file__'))
@@ -148,14 +144,6 @@ if __name__ == "__main__":
 
         saveName= imageName.strip(".png")
         saveName= saveName.strip("frame")
-        ##print(saveName)
-        # pos = fileList[xText].rfind(".")
-        # textName = fileList[xText][:pos]
-
-        # ouput_file = open(_TXT_PATH + '/' + fileList[xText])
-        # ouput_file =open(_TXT_PATH)
-
-        # lines = ouput_file.readlines()
 
         #xml_file_name = os.path.join(_ANNOTATION_SAVE_PATH, ("frame"+saveName + '.xml'))
         xml_file_name = os.path.join(_ANNOTATION_SAVE_PATH, (saveName + '.xml'))
@@ -175,22 +163,22 @@ if __name__ == "__main__":
 
         doc = my_dom.createDocument(None,_ROOT_NODE,None)
 
-        # 获得根节�?
+        #find node
         root_node = doc.documentElement
 
-        # folder节点
+        #folder node
 
         createChildNode(doc, 'folder',_FOLDER_NODE, root_node)
 
-        # filename节点
+        #filename node
 
         createChildNode(doc, 'filename',saveName+'.png',root_node)
 
-        # source节点
+        #source node
 
         source_node = doc.createElement('source')
 
-        # source的子节点
+        #source node
 
         createChildNode(doc, 'database',_DATABASE_NAME, source_node)
 
@@ -202,11 +190,11 @@ if __name__ == "__main__":
 
         root_node.appendChild(source_node)
 
-        # owner节点
+        #owner node
 
         owner_node = doc.createElement('owner')
 
-        # owner的子节点
+        #owner childnode
 
         createChildNode(doc, 'flickrid','NULL', owner_node)
 
@@ -214,11 +202,11 @@ if __name__ == "__main__":
 
         root_node.appendChild(owner_node)
 
-        # size节点
+        #sizenode
 
         size_node = doc.createElement('size')
-
-        createChildNode(doc, 'width',str(width/2), size_node)
+        #if your training and width not the same size modify here(ex:cutted habcam)
+        createChildNode(doc, 'width',str(width), size_node)
 
         createChildNode(doc, 'height',str(height), size_node)
 
@@ -226,29 +214,24 @@ if __name__ == "__main__":
 
         root_node.appendChild(size_node)
 
-        # segmented节点
+        # segmented node
 
         createChildNode(doc, 'segmented',_SEGMENTED, root_node)
         count=0
         for ann in ann_data:
             if((saveName+".png")==ann["filename"]):
-                # object节点
+                # object node
                 object_node = createObjectNode(doc, ann)
                 root_node.appendChild(object_node)
                 count=count+1
             else:
                 continue
 
-        # 构建XML文件名称
+        # construct xml filename
 
         print(xml_file_name)
 
-        # 创建XML文件
-
-        # createXMLFile(attrs, width, height, xml_file_name)
-
-
-        # # 写入文件
+        #write in document
         #
         if(count>0):
             writeXMLFile(doc, xml_file_name)
