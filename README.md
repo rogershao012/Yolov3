@@ -13,14 +13,18 @@ https://github.com/AlexeyAB/darknet
 <h3>STEPS:</h3>
 <br><b> 1.Download the original project from https://github.com/AlexeyAB/darknet and check the Requires </b></br>
 <br><b> 2.Go to its dictionary and open Makefile to change as following and do make in the directory</b>
-<br>(1)"GPU=1" to build with CUDA to accelerate by using GPU (CUDA should be in `/usr/local/cuda`)
-<br>(2)"CUDNN=1" to build with cuDNN v5-v7 to accelerate training by using GPU (cuDNN should be in `/usr/local/cudnn`)
-<br>(3)"CUDNN_HALF=1" to build for Tensor Cores (on Titan V / Tesla V100 / DGX-2 and later) speedup Detection 3x, Training 2x
-<br>(4)"OPENCV=1" to build with OpenCV 3.x/2.4.x - allows to detect on video files and video streams from network cameras or web-cams
-<br>(5)"DEBUG=1" to bould debug version of Yolo
-<br>(6)"OPENMP=1" to build with OpenMP support to accelerate Yolo by using multi-core CPU
-<br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. <br>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
+<ul>
+<li>(1)"GPU=1" to build with CUDA to accelerate by using GPU (CUDA should be in `/usr/local/cuda`)</li>
+<li>(2)"CUDNN=1" to build with cuDNN v5-v7 to accelerate training by using GPU (cuDNN should be in `/usr/local/cudnn`)</li>
+<li>(3)"CUDNN_HALF=1" to build for Tensor Cores (on Titan V / Tesla V100 / DGX-2 and later) speedup Detection 3x, Training 2x</li>
+<li>(4)"OPENCV=1" to build with OpenCV 3.x/2.4.x - allows to detect on video files and video streams from network cameras or web-cams</li>
+<li>(5)"DEBUG=1" to bould debug version of Yolo</li>
+<li>(6)"OPENMP=1" to build with OpenMP support to accelerate Yolo by using multi-core CPU</li>
+<li>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. </li>
+    <li>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
     or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`</br>
+    </li></ul>
+    
 <br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74 and put to the directory build\darknet\x64</b></br>
 <br><b> 4.create yolov3_obj.cfg same content as yolov3.cfg and modify some place as following</b>
 <ul>
@@ -42,7 +46,7 @@ https://github.com/AlexeyAB/darknet
 <br> the format of YOLO is (object-class) (x) (y) (width) (height)
 <br> "(object-class)" is following your name file,from 0 to n
 <br> Remember to divide you pic path into train,valid,or (test)</br>
-<br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then change it to cfg file</b>
+<br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then replace it to cfg file anchor </b></br>
 <br><b> 10.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
 <li>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
