@@ -1,3 +1,4 @@
+#original from
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # @Time    : 2018/1/19 10:05
@@ -13,11 +14,12 @@ import os
 import cv2
 import json
 
-# xml文件规范定义
+# xml format
 
-# _TXT_PATH= '../../SynthText-master/myresults/groundtruth'
+#Remember to change the PATH
 _IMAGE_PATH= '/media/share33/Database/NOAA Fish Finding/Training Data Release/imagery/habcam_seq0'
 
+#some information you can change
 _INDENT= ''*4
 _NEW_LINE= '\n'
 _FOLDER_NODE= 'habcam_seq0'
@@ -30,24 +32,21 @@ _DIFFICULT= '0'
 _TRUNCATED= '0'
 _POSE= 'Unspecified'
 
-
-# _IMAGE_COPY_PATH= 'JPEGImages'
 _ANNOTATION_SAVE_PATH= 'Annotations'
-# _IMAGE_CHANNEL= 3
 
-# 封装创建节点的过�?
-def createElementNode(doc,tag, attr):  # 创建一个元素节�?
+# encapsulation create node
+def createElementNode(doc,tag, attr):  # create a node
     element_node = doc.createElement(tag)
 
-    # 创建一个文本节�?
+    # create a text node
     text_node = doc.createTextNode(attr)
 
-    # 将文本节点作为元素节点的子节�?
+    # make text node being element node's Child node
     element_node.appendChild(text_node)
 
     return element_node
 
-# 封装添加一个子节点的过�?
+# encapsulation add node
 def createChildNode(doc,tag, attr,parent_node):
 
     child_node = createElementNode(doc, tag, attr)
@@ -55,7 +54,7 @@ def createChildNode(doc,tag, attr,parent_node):
     parent_node.appendChild(child_node)
 
 
-# object节点比较特殊
+#Object node
 def createObjectNode(doc,attrs):
 
     object_node = doc.createElement('object')
