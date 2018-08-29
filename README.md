@@ -21,4 +21,23 @@ https://github.com/AlexeyAB/darknet
 <br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. <br>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
     or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`</br>
 <br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74</b></br>
-
+<br><b> 4.create yolov3_obj.cfg same content as yolov3.cfg and modify some place as following</b></br>
+<br>There are three places with classes in the cfg,change it to your classes</br>
+<br>There are three places with filters in the cfg,change the number by "(classes + 5)x3)"</br>
+<br>offical recommend to set cfg file(head) batch=64 and subdivisions=8, my setting in FinalWeights file</br>
+<br></br>
+<br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b></br>
+<br><b> 6.Create file obj.data in the directory build\darknet\x64\data\, containing (where classes = number of objects):</b></br>
+<br> ```
+  classes= 2
+  train  = data/train.txt
+  valid  = data/test.txt
+  names = data/obj.names
+  backup = backup/
+  ```</br>
+<br><b> 7.</b></br>
+<br><b> 8.</b></br>
+<br><b> 9.</b></br>
+<br><b> 10.</b></br>
+<br><b> 11.</b></br>
+<br><b> 12.</b></br>
