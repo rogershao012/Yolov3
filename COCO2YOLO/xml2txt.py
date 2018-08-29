@@ -2,12 +2,15 @@ import os
 import re
 import cv2
 import sys
+
+#not really need to change path
 #the source folder that you will read the .jpg and .xml from
 src0="/home/iis/NewDownload/BeforeYolo/habcam_seq0"
 #the destation folder that you will save the .jpg files and .txt files, which are rename and transformed
 dst0='/home/iis/NewDownload/AfterYolo/habcam_seq0'
 #the num of the class that your cutting picture described in your .xml file belong to
 voc_name0='/home/iis/NewDownload/BeforeYolo/habcam_seq0.names'
+
 if __name__=='__main__':
     if len(sys.argv)<4:
         print('yolo-voc program need 5 argv.you must input command like\n   python 123.py [start_num] [source folder name] [deststion folder name] [voc name file]')
@@ -21,20 +24,6 @@ if __name__=='__main__':
         else:
             voc_name=''
             voc_flag=False
-        '''src=input('please input the path of source:\n')
-        if src=='':
-            src=src0
-            dst=dst0
-            voc_name=voc_name0
-        else:
-            dst=input('please input the path of destination:\n')
-            if dst=='':
-                dst = dst0
-                voc_name = voc_name0
-            else:
-                voc_name = input('please input the class_name file:\n')
-                if dst=='':
-                    voc_name = voc_name0'''
         listd=os.listdir(src)
         txt=re.compile(r'.*(xml)')
         listdir=[]
@@ -75,6 +64,7 @@ if __name__=='__main__':
             #txtname0 = dst + "frame" +str(int(filename0)).zfill(6) + '.txt'
             f = open(txtname0, 'w')
             del names[0]
+            #the species index,remember always change it after you change dataset
             for j in range(0,len(names)):
                 if voc_flag==True:
                     index = listname.index(names[j])
@@ -114,13 +104,9 @@ if __name__=='__main__':
                 Newxmax=int(float(xmax[j]))
                 Newymax=int(float(ymax[j]))
 
-
-
-            #txtname=dst+i
-            #txtname0=txtname.replace('xml','txt')
-
                 if j!=0:
                     f.write('\n')
+                #calculate the yolo format information
                 f.write(str(index)+' '+'%0.4f'%((float(Newxmin)+float(Newxmax))/float(width)/2)+' '+'%0.4f'%((float(Newymin)+float(Newymax))/float(height)/2)+' '+'%0.4f'%(float(Newxmax-Newxmin)/float(width))+' '+'%0.4f'%(float(Newymax-Newymin)/float(height)))
             f.close()
             imgsource=src+i
@@ -134,6 +120,7 @@ if __name__=='__main__':
             if img is None:
                 imgname0 = imgname0.replace('JPG', 'jpg')
                 img = cv2.imread(imgname0)
+            #if you want to change jpg to png,just change the last jpg to png
             imgdst = dst  + str(filename).rstrip(".png")+".jpg"
             #imgdst=dst+"frame"+str(filename0).zfill(6)+'.jpg'
             #imgname1 = imgdst.replace('xml', 'jpg')
