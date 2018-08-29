@@ -43,9 +43,11 @@ https://github.com/AlexeyAB/darknet
 </ul>
 <br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b></br>
 <br><b> 8.Put image-files and YOLO file of your objects in the directory build\darknet\x64\data\obj\</b>
-<br> the format of YOLO is (object-class) (x) (y) (width) (height)
-<br> "(object-class)" is following your name file,from 0 to n
-<br> Remember to divide you pic path into train,valid,or (test)</br>
+<ul>
+<li> the format of YOLO is (object-class) (x) (y) (width) (height)</li>
+<li> "(object-class)" is following your name file,from 0 to n</li>
+<li> Remember to divide you pic path into train,valid,or (test)</li>
+</ul>
 <br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then replace it to cfg file anchor </b></br>
 <br><b> 10.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
