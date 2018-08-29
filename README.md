@@ -28,15 +28,15 @@ https://github.com/AlexeyAB/darknet
 <br></br>
 <br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b></br>
 <br><b> 6.Create file obj.data in the directory build\darknet\x64\data\, containing (where classes = number of objects):</b></br>
-<br> ```
-  classes= 2
-  train  = data/train.txt
-  valid  = data/test.txt
-  names = data/obj.names
-  backup = backup/
-  ```</br>
-<br><b> 7.</b></br>
-<br><b> 8.</b></br>
+<br>classes= 2</br>
+<br>train  = data/train.txt</br>
+<br>valid  = data/test.txt</br>
+<br>names = data/obj.names</br>
+<br>backup = backup/</br>
+<br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b></br>
+<br><b> 8.Put image-files and YOLO file of your objects in the directory build\darknet\x64\data\obj\</b></br>
+<br> the format of YOLO is <object-class> <x> <y> <width> <height></br>
+<br> <object-class> is following your name file,from 0 to n</br>
 <br><b> 9.</b></br>
 <br><b> 10.</b></br>
 <br><b> 11.</b></br>
