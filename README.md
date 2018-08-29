@@ -10,6 +10,7 @@ https://github.com/AlexeyAB/darknet
 <li><b>changeFile Folder</b> -> <b>files which easy to output coco format</b></li>
 <li><b>TransformJson Folder</b> -> <b>Transform output result to json format</b></li> 
 <li><b>tackleHabcam Folder</b> -> <b>Tackle with no annotation and divide picture of Habcam</b></li> 
+<li><b>CLAHE Folder</b> -> <b>light up the picture</b></li> 
 </ul>
 
 <h3>STEPS:</h3>
