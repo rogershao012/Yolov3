@@ -43,8 +43,11 @@ https://github.com/AlexeyAB/darknet
 <br> "(object-class)" is following your name file,from 0 to n
 <br> Remember to divide you pic path into train,valid,or (test)</br>
 <br><b> 9.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
-<br>(file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations) (To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2)
-<br>If you want to submit the COCO format,Change two files in src with changeFile folder's file</br>
+<ul>
+<li><br>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
+<li>To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2</li>
+<li><br>If you want to submit the COCO format,Change two files in src with changeFile folder's file</li>
+</ul></br>
 <br><b> 10.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
 <ul>
 <li> After each 100 iterations you can stop and later start training from this point and just change darknet53.conv.74 to the new file</li>
