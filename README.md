@@ -67,3 +67,10 @@ https://github.com/AlexeyAB/darknet
 </ul>
 <br><b> 12.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
 <br><b> 13.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
+<br><b> 14.if you want to output,just run "./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -dont_show -ext_output <<train.txt>train.txt> result.txt </b></br>
+<ul>
+    <li>train.txt is the image path file</li>
+    <li>result.txt is the file you output</li>
+    <li>train.txt can get from add2name.py no matter you want to train or test</li>
+</ul>
+<br><b> 15.Use transformJson Folder file to convert Step 14 output to Json format </b></br>
