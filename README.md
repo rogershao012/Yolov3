@@ -39,7 +39,8 @@ https://github.com/AlexeyAB/darknet
 <br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b></br>
 <br><b> 8.Put image-files and YOLO file of your objects in the directory build\darknet\x64\data\obj\</b>
 <br> the format of YOLO is (object-class) (x) (y) (width) (height)
-<br> "(object-class)" is following your name file,from 0 to n</br>
+<br> "(object-class)" is following your name file,from 0 to n
+<br> Remember to divide you pic path into train,valid,or (test)</br>
 <br><b> 9.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <br>(file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations) (To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2)</br>
 <br><b> 10.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
