@@ -24,6 +24,5 @@
   <li><b>Remember</b>: output in train, source folder name usally same changed path</li>
   <li><b>Purpose </b>: create path file for yolo to find annotation and image</li>
   <li><b>Usage </b>: python 123.py [source folder name] [changed path]</li>
-  <li><b>Usage explain </b>: <b>source folder name</b>(Where you put yolo(txt) with pic),
-                             <b>change path</b>(Where you want its path)</li>
+  <li><b>Usage explain </b>: <b>source folder name</b>(Where you put yolo(txt) with pic),<b>change path</b>(Where you want its path)</li>
 </ul>
