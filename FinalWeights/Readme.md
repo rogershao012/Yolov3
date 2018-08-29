@@ -1,4 +1,4 @@
-<h1>The file is introduce of the training setting of my task</h1>
+<h1>The Folder is introduce of the training setting of my task</h1>
 
 Because the weights file is too large,So I upload it to:
 <br>https://drive.google.com/drive/folders/1Ls6gTASiK5ynh4mEuVKJFciQFtymRVoa?usp=sharing</br>
