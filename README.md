@@ -30,11 +30,11 @@ https://github.com/AlexeyAB/darknet
 <br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b></br>
 <br><b> 6.Create file obj.data in the directory build\darknet\x64\data\, containing (where classes = number of objects):</b></br>
 <ul>
-<li><br>classes= 2</br></li>
-<li><br>train  = data/train.txt</br></li>
-<li><br>valid  = data/test.txt</br></li>
-<li><br>names = data/obj.names</br></li>
-<li><br>backup = backup/</br></li>
+<li>classes= 2</li>
+<li>train  = data/train.txt</li>
+<li>valid  = data/test.txt</li>
+<li>names = data/obj.names</li>
+<li>backup = backup/</li>
 </ul>
 <br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b></br>
 <br><b> 8.Put image-files and YOLO file of your objects in the directory build\darknet\x64\data\obj\</b></br>
@@ -44,7 +44,12 @@ https://github.com/AlexeyAB/darknet
 <br>(file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations) (To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2)
 <br><b> 10.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b></br>
 <ul>
-<li><br> After each 100 iterations you can stop and later start training from this point and just change darknet53.conv.74 to the new file</br></li>
+<li> After each 100 iterations you can stop and later start training from this point and just change darknet53.conv.74 to the new file</li>
+<li> If during training you see nan values for avg (loss) field - then training goes wrong, but if nan is in some other lines - then training goes well.</li>
+<li> If you changed width= or height= in your cfg-file, then new width and height must be divisible by 32.</li>
+<li> After training use such command for detection: ./darknet detector test data/obj.data yolo-obj.cfg yolo-obj_8000.weights</li>
+</ul>
+<li> if error Out of memory occurs then in .cfg-file you should increase subdivisions=16, 32 or 64(or decrease the batch size)</li>
 </ul>
 <br><b> 11.</b></br>
 <br><b> 12.</b></br>
