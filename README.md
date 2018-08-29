@@ -51,13 +51,17 @@ https://github.com/AlexeyAB/darknet
 <li> Remember to divide you pic path into train,valid,or (test)</li>
 </ul>
 <br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then replace it to cfg file anchor </b></br>
-<br><b> 10.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
+<br><b> 10.If you want to process CLAHE,just use the CLAHE folder's python file.</b></br>
+<ul>
+    <li>Remember picture still have to stay with YOLO(txt) to train</li>
+</ul>
+<br><b> 11.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
 <li>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
 <li>To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2</li>
 <li>If you want to submit the COCO format,Change two files in src with changeFile folder's file</li>
 </ul>
-<br><b> 11.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
+<br><b> 12.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
 <ul>
 <li> After each 100 iterations you can stop and later start training from this point and just change darknet53.conv.74 to the new file</li>
 <li> If during training you see nan values for avg (loss) field - then training goes wrong, but if nan is in some other lines - then training goes well.</li>
@@ -65,12 +69,12 @@ https://github.com/AlexeyAB/darknet
 <li> After training use such command for detection: ./darknet detector test data/obj.data yolo-obj.cfg yolo-obj_8000.weights</li>
 <li> if error Out of memory occurs then in .cfg-file you should increase subdivisions=16, 32 or 64(or decrease the batch size)</li>
 </ul>
-<br><b> 12.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
-<br><b> 13.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
-<br><b> 14.if you want to output,just run "./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -dont_show -ext_output <<train.txt>train.txt> result.txt </b></br>
+<br><b> 13.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
+<br><b> 14.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
+<br><b> 15.if you want to output,just run "./darknet detector test cfg/coco.data cfg/yolov3.cfg yolov3.weights -dont_show -ext_output <<train.txt>train.txt> result.txt </b></br>
 <ul>
     <li>train.txt is the image path file</li>
     <li>result.txt is the file you output</li>
     <li>train.txt can get from add2name.py no matter you want to train or test</li>
 </ul>
-<br><b> 15.Use transformJson Folder file to convert Step 14 output to Json format </b></br>
+<br><b> 16.Use transformJson Folder file to convert Step 14 output to Json format </b></br>
