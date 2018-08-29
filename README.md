@@ -51,5 +51,5 @@ https://github.com/AlexeyAB/darknet
 </ul>
 <li> if error Out of memory occurs then in .cfg-file you should increase subdivisions=16, 32 or 64(or decrease the batch size)</li>
 </ul>
-<br><b> 11.</b>
-<br><b> 12.</b>
+<br><b> 11.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b>
+<br><b> 12.if you want to test map, just change the obj.data file valid path to test file</b>
