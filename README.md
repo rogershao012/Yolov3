@@ -18,7 +18,7 @@ https://github.com/AlexeyAB/darknet
 <br>(4)"OPENCV=1" to build with OpenCV 3.x/2.4.x - allows to detect on video files and video streams from network cameras or web-cams</br>
 <br>(5)"DEBUG=1" to bould debug version of Yolo</br>
 <br>(6)"OPENMP=1" to build with OpenMP support to accelerate Yolo by using multi-core CPU</br>
-<br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
+<br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. <br>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
     or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`</br>
 <br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74</b></br>
 
