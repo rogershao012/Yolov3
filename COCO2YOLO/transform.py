@@ -48,9 +48,7 @@ for i in data:
                     inputfile.append(inner)
 print(type(inputfile)) #check
 print(inputfile[0])  #check
-#with open("COCO_train.json","a+") as f:
-#    for hostdict in inputfile:
-#        json.dump(hostdict,f)
-#        f.write("\n")
+
+
 inputfile = json.dumps(inputfile)
 writeNum(inputfile)   #outputfile
