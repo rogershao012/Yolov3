@@ -9,8 +9,8 @@
 </ul>
 <li><h4>makexml.py</h4></li>
 <ul>
-  <li><b>Remember</b>: </li>
-  <li><b>Purpose </b>: </li>
+  <li><b>Remember</b>: modify image size,image path</li>
+  <li><b>Purpose </b>: make json file into individual json file</li>
 </ul>
 <li><h4>xml2txt.py</h4></li>
 <ul>
