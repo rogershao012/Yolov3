@@ -10,7 +10,6 @@ https://github.com/AlexeyAB/darknet
 </ul>
 
 <h3>STEPS:</h3>
-<br> 1.Download the original project and check the Requires</br>
-<br> original project https://github.com/AlexeyAB/darknet</br>
+<br> 1.Download the original project and check the Requires from original project https://github.com/AlexeyAB/darknet</br>
 2.
 
