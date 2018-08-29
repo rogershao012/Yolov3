@@ -20,14 +20,14 @@ https://github.com/AlexeyAB/darknet
 <br>(6)"OPENMP=1" to build with OpenMP support to accelerate Yolo by using multi-core CPU
 <br>(7)"LIBSO=1" to build a library `darknet.so` and binary runable file `uselib` that uses this library. <br>Or you can try to run so `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib test.mp4` How to use this SO-library from your own code - you can look at C++ example: https://github.com/AlexeyAB/darknet/blob/master/src/yolo_console_dll.cpp
     or use in such a way: `LD_LIBRARY_PATH=./:$LD_LIBRARY_PATH ./uselib data/coco.names cfg/yolov3.cfg yolov3.weights test.mp4`
-<br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74 and put to the directory build\darknet\x64</b>
+<br><b> 3.Download the pretrain weights for YOLOv3 from https://pjreddie.com/media/files/darknet53.conv.74 and put to the directory build\darknet\x64</b></br>
 <br><b> 4.create yolov3_obj.cfg same content as yolov3.cfg and modify some place as following</b>
 <ul>
 <li>There are three places with classes in the cfg,change it to your classes</li>
 <li>There are three places with filters in the cfg,change the number by "(classes + 5)x3)"</li>
 <li>offical recommend to set cfg file(head) batch=64 and subdivisions=8, my setting in FinalWeights file</li>
 </ul>
-<br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b>
+<br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b></br>
 <br><b> 6.Create file obj.data in the directory build\darknet\x64\data\, containing (where classes = number of objects):</b>
 <ul>
 <li>classes= 2</li>
@@ -36,7 +36,7 @@ https://github.com/AlexeyAB/darknet
 <li>names = data/obj.names</li>
 <li>backup = backup/</li>
 </ul>
-<br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b>
+<br><b> 7.Follow the "COCO2YOLO" folder to transform your data format into YOLO(txt) and picture</b></br>
 <br><b> 8.Put image-files and YOLO file of your objects in the directory build\darknet\x64\data\obj\</b>
 <br> the format of YOLO is (object-class) (x) (y) (width) (height)
 <br> "(object-class)" is following your name file,from 0 to n
@@ -51,5 +51,5 @@ https://github.com/AlexeyAB/darknet
 </ul>
 <li> if error Out of memory occurs then in .cfg-file you should increase subdivisions=16, 32 or 64(or decrease the batch size)</li>
 </ul>
-<br><b> 11.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b>
-<br><b> 12.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b>
+<br><b> 11.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
+<br><b> 12.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
