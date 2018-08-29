@@ -25,7 +25,7 @@ https://github.com/AlexeyAB/darknet
 <ul>
 <li>There are three places with classes in the cfg,change it to your classes</li>
 <li>There are three places with filters in the cfg,change the number by "(classes + 5)x3)"</li>
-<li>offical recommend to set cfg file(head) batch=64 and subdivisions=8, my setting in FinalWeights file</li>
+<li>offical recommend to set cfg file(head) batch=64 and subdivisions=8, my setting in FinalWeights folder</li>
 </ul>
 <br><b> 5.Create file obj.names in the directory build\darknet\x64\data\, with objects names - each in new line</b></br>
 <br><b> 6.Create file obj.data in the directory build\darknet\x64\data\, containing (where classes = number of objects):</b>
