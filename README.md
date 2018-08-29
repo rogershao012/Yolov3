@@ -1,2 +1,4 @@
 # Yolov3
-instruction of Yolo for handover
+Yolov3 instruction for handover
+original project from 
+https://github.com/AlexeyAB/darknet
