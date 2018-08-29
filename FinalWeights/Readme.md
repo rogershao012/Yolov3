@@ -3,7 +3,7 @@
 Because the weights file is too large,So I upload it to:
 <br>https://drive.google.com/drive/folders/1Ls6gTASiK5ynh4mEuVKJFciQFtymRVoa?usp=sharing</br>
 
-<h4>Following is some information about setting of cfg file <for each dataset(special part):</h4>
+<h4>Following is some information about setting of cfg file for each dataset(special part):</h4>
 
 <h3>mbari</h3>
 <ul>
