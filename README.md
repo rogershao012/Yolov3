@@ -49,13 +49,14 @@ https://github.com/AlexeyAB/darknet
 <li> "(object-class)" is following your name file,from 0 to n</li>
 <li> Remember to divide you pic path into train,valid,or (test)</li>
 </ul>
+
+<h5> * If you want to modify habcam dataset,there is something can us in tackleHabcam folder</h5>
+
 <br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then replace it to cfg file anchor </b></br>
 <br><b> 10.If you want to process CLAHE,just use the CLAHE folder's python file.</b></br>
 <ul>
     <li>Remember picture still have to stay with YOLO(txt) to train</li>
 </ul>
-
-<h5> * If you want to modify habcam dataset,there is something can us in tackleHabcam folder</h5>
 
 <br><b> 11.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
