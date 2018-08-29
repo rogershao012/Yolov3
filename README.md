@@ -42,13 +42,14 @@ https://github.com/AlexeyAB/darknet
 <br> the format of YOLO is (object-class) (x) (y) (width) (height)
 <br> "(object-class)" is following your name file,from 0 to n
 <br> Remember to divide you pic path into train,valid,or (test)</br>
-<br><b> 9.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
+<br><b> 9.If you want to modify anchor size,cmd "./darknet detector calc_anchors data/obj.data -num_of_clusters 9 -width 416 -height 416" and it will show up on terminal and anchor.txt,then change it to cfg file</b>
+<br><b> 10.Start training by using the command line: ./darknet detector train data/obj.data yolo-obj.cfg darknet53.conv.74</b>
 <ul>
 <li>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
 <li>To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2</li>
 <li>If you want to submit the COCO format,Change two files in src with changeFile folder's file</li>
 </ul>
-<br><b> 10.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
+<br><b> 11.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
 <ul>
 <li> After each 100 iterations you can stop and later start training from this point and just change darknet53.conv.74 to the new file</li>
 <li> If during training you see nan values for avg (loss) field - then training goes wrong, but if nan is in some other lines - then training goes well.</li>
@@ -56,5 +57,5 @@ https://github.com/AlexeyAB/darknet
 <li> After training use such command for detection: ./darknet detector test data/obj.data yolo-obj.cfg yolo-obj_8000.weights</li>
 <li> if error Out of memory occurs then in .cfg-file you should increase subdivisions=16, 32 or 64(or decrease the batch size)</li>
 </ul>
-<br><b> 11.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
-<br><b> 12.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
+<br><b> 12.if you want to check map ./darknet detector map data/obj.data yolo-obj.cfg yolo-obj_8000.weights</b></br>
+<br><b> 13.if you want to test map, just change the obj.data's valid path and execute step 11 to test file</b></br>
