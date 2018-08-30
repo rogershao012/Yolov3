@@ -3,6 +3,12 @@ Yolov3 instruction for handover
 original project from 
 https://github.com/AlexeyAB/darknet
 
+<h3>Other type of Yolov3(seen like the best version):</h3>
+<ul>
+    <li><b>Some of them is not the same input format as C type</b></li>
+    <li>keras:https://github.com/qqwweee/keras-yolo3</li>
+    <li>pytorch:https://github.com/eriklindernoren/PyTorch-YOLOv3</li>
+</ul>
 <h3>Maybe can try:</h3>
 <ul>
     <li><b>LRM</b>(loss rank mining):https://arxiv.org/pdf/1804.04606.pdf</li>
