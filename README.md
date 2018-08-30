@@ -13,7 +13,7 @@ https://github.com/AlexeyAB/darknet
 <ul>
     <li><b>LRM</b>(loss rank mining):https://arxiv.org/pdf/1804.04606.pdf</b></li>
     <li><b>Zero-Shot detection</b>(can detection no show object):https://arxiv.org/pdf/1803.07113.pdf</b></li>
-    <li><b>Preprocessing:</b> Log, Laplace, Gamma, Retinex</li>
+    <li><b>Preprocessing:</b> Log , Laplace , Gamma , Retinex </li>
 </ul>
 
 <h3>Not work in C:</h3>
