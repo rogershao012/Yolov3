@@ -5,17 +5,17 @@ https://github.com/AlexeyAB/darknet
 
 <h3>Maybe can try:</h3>
 <ul>
-    <li>LRM(loss rank mining)https://arxiv.org/pdf/1804.04606.pdf</li>
-    <li>Zero-Shot detection(can detection no show object)https://arxiv.org/pdf/1803.07113.pdf</li>
+    <li><b>LRM</b>(loss rank mining)https://arxiv.org/pdf/1804.04606.pdf</li>
+    <li><b>Zero-Shot detection</b>(can detection no show object)https://arxiv.org/pdf/1803.07113.pdf</li>
     
 </ul>
 
 <h3>Not work:</h3>
 <ul>
-    <li>SoftNMS</li>
-    <li>Anchor box x, y offset predictions</li>
-    <li>Linear x, y predictions instead of logistic</li>
-    <li>Focal loss</li>
+    <li><b>SoftNMS</b></li>
+    <li><b>Anchor box x, y offset predictions</b></li>
+    <li><b>Linear x, y predictions instead of logistic</b></li>
+    <li><b>Focal loss</b></li>
 </ul>
 
 <h3>Some folders base on the repository that can help process:</h3>
