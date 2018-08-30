@@ -3,7 +3,7 @@
 <br>original project from 
 https://github.com/AlexeyAB/darknet
 
-<h3>Other type of Yolov3(seen like the best version):</h3>
+<h3>Other type of Yolov3:</h3>
 <ul>
     <li><b>Some of them is not the same input format as C type,I usually train by C</b></li>
     <li><b>keras</b>:https://github.com/qqwweee/keras-yolo3</b></li>
