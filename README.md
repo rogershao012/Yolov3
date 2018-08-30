@@ -85,7 +85,7 @@ https://github.com/AlexeyAB/darknet
 <ul>
 <li>file yolo-obj_xxx.weights will be saved to the build\darknet\x64\backup\ for each 100 iterations</li>
 <li>To disable Loss-Window use darknet.exe detector train data/obj.data yolo-obj.cfg darknet53.conv.74 -dont_show, if you train on computer without monitor like a cloud Amazaon EC2</li>
-<li>If you want to submit the COCO format,Change two files in src with changeFile folder's file</li>
+<li>If you want to submit the COCO format,change two files in src with changeFile folder's file then make in dictionary again</li>
 </ul>
 <br><b> 12.After training is complete - get result yolo-obj_final.weights from path build\darknet\x64\backup\</b>
 <ul>
