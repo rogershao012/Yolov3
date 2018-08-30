@@ -5,9 +5,9 @@ https://github.com/AlexeyAB/darknet
 
 <h3>Other type of Yolov3(seen like the best version):</h3>
 <ul>
-    <li><b>Some of them is not the same input format as C type</b></li>
-    <li>keras:https://github.com/qqwweee/keras-yolo3</li>
-    <li>pytorch:https://github.com/eriklindernoren/PyTorch-YOLOv3</li>
+    <li><b>Some of them is not the same input format as C type,I usually train by C</b></li>
+    <li><b>keras</b>:https://github.com/qqwweee/keras-yolo3</li>
+    <li><b>pytorch</b>:https://github.com/eriklindernoren/PyTorch-YOLOv3</li>
 </ul>
 <h3>Maybe can try:</h3>
 <ul>
