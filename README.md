@@ -28,7 +28,7 @@ https://github.com/AlexeyAB/darknet
 <li><b>CLAHE Folder</b> -> <b>light up the picture</b></li> 
 </ul>
 
-<h3>STEPS:</h3>
+<h3>Training Steps:</h3>
 <br><b> 1.Download the original project from https://github.com/AlexeyAB/darknet and check the Requires </b></br>
 <br><b> 2.Go to its dictionary and open Makefile to change as following and do make in the directory</b>
 <ul>
