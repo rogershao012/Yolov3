@@ -9,14 +9,14 @@ https://github.com/AlexeyAB/darknet
     <li><b>keras</b>:https://github.com/qqwweee/keras-yolo3</li>
     <li><b>pytorch</b>:https://github.com/eriklindernoren/PyTorch-YOLOv3</li>
 </ul>
-<h3>Maybe can try:</h3>
+<h3>Maybe can try in C:</h3>
 <ul>
     <li><b>LRM</b>(loss rank mining):https://arxiv.org/pdf/1804.04606.pdf</li>
     <li><b>Zero-Shot detection</b>(can detection no show object):https://arxiv.org/pdf/1803.07113.pdf</li>
     
 </ul>
 
-<h3>Not work:</h3>
+<h3>Not work in C:</h3>
 <ul>
     <li><b>SoftNMS</b></li>
     <li><b>Anchor box x, y offset predictions</b></li>
