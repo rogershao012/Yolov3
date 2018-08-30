@@ -3,7 +3,22 @@ Yolov3 instruction for handover
 original project from 
 https://github.com/AlexeyAB/darknet
 
-<h3>Following is some introductions and files base on the repository:</h3>
+<h3>Maybe can try:</h3>
+<ul>
+    <li>LRM(loss rank mining)https://arxiv.org/pdf/1804.04606.pdf</li>
+    <li>Zero-Shot detection(can detection no show object)https://arxiv.org/pdf/1803.07113.pdf</li>
+    
+</ul>
+
+<h3>Not work:</h3>
+<ul>
+    <li>SoftNMS</li>
+    <li>Anchor box x, y offset predictions</li>
+    <li>Linear x, y predictions instead of logistic</li>
+    <li>Focal loss</li>
+</ul>
+
+<h3>Some folders base on the repository that can help process:</h3>
 <ul>
 <li><b>Finalweights Folder</b> -> <b>Introduce of my training setting and weights file</b></li>
 <li><b>COCO2YOLO Folder</b> -> <b>Change COCO format to YOLO format and provide tool to show file path</b></li>
