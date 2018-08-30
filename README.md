@@ -6,14 +6,14 @@ https://github.com/AlexeyAB/darknet
 <h3>Other type of Yolov3(seen like the best version):</h3>
 <ul>
     <li><b>Some of them is not the same input format as C type,I usually train by C</b></li>
-    <li><b>keras</b>:https://github.com/qqwweee/keras-yolo3</li>
-    <li><b>pytorch</b>:https://github.com/eriklindernoren/PyTorch-YOLOv3</li>
+    <li><b>keras</b>:https://github.com/qqwweee/keras-yolo3</b></li>
+    <li><b>pytorch</b>:https://github.com/eriklindernoren/PyTorch-YOLOv3</b></li>
 </ul>
 <h3>Maybe can try in C:</h3>
 <ul>
-    <li><b>LRM</b>(loss rank mining):https://arxiv.org/pdf/1804.04606.pdf</li>
-    <li><b>Zero-Shot detection</b>(can detection no show object):https://arxiv.org/pdf/1803.07113.pdf</li>
-    
+    <li><b>LRM</b>(loss rank mining):https://arxiv.org/pdf/1804.04606.pdf</b></li>
+    <li><b>Zero-Shot detection</b>(can detection no show object):https://arxiv.org/pdf/1803.07113.pdf</b></li>
+    <li><b>Preprocessing:Log,Laplace,Gamma,Retinex</li>
 </ul>
 
 <h3>Not work in C:</h3>
